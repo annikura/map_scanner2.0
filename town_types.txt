@@ -1,0 +1,10 @@
+0-Castle
+1-Rampart
+2-Tower
+3-Inferno
+4-Necropolis
+5-Dungeon
+6-Stronghold
+7-Fortress
+8-Conflux
+255-Random Town
