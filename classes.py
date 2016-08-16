@@ -201,7 +201,11 @@ class Player:
         if f != FormatConst.roe:
             for hero in range(heroes_cnt):
                 sample = Hero(hero_type=_get_int(), name=_get_string())
-                if hero != 0:
+                already_exits = False
+                for hero_structure in self.heroes:
+                    if sample.id == hero_structure.id:
+                        already_exits = True
+                if not already_exits:
                     self.heroes.append(sample)
 
 
