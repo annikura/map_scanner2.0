@@ -16,6 +16,7 @@ class GlobalConst:
     town_types = 9
     hex_base = 16
     random_town = "Random town"
+    files_path = 'files/'
 
 
 class FormatConst:
@@ -25,7 +26,7 @@ class FormatConst:
     sod = "SoD"
 
 
-class GTypeConsts:
+class GTypeConst:
     art = {FormatConst.roe: 1,
            FormatConst.ab: 2,
            FormatConst.sod: 2,
@@ -90,7 +91,7 @@ def _get_int(num_size=1):
 
 
 def _get_fileline(filename, req_index):
-    with open(filename) as file:
+    with open(GlobalConst.files_path + filename) as file:
         ret_line = GlobalConst.not_found
         for line in file:
             separator = line.find('-')
@@ -226,7 +227,7 @@ class VictoryCond:
             if self.type in [VictoryConst.AqArt, VictoryConst.TrnsArt]:
                 self.req_quantity = 1
                 if self.type in [VictoryConst.AqArt]:
-                    self.obj_name = _get_given_fileline('artifacts.txt', num_size=GTypeConsts.art[f])  # AB
+                    self.obj_name = _get_given_fileline('artifacts.txt', num_size=GTypeConst.art[f])  # AB
                 if self.type in [VictoryConst.TrnsArt]:
                     self.obj_name = _get_given_fileline('artifacts.txt')  # AB
             if self.type in [VictoryConst.AccRes, VictoryConst.AccCreat]:

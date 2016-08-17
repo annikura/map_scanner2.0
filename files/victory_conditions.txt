@@ -1,0 +1,12 @@
+0-Acquire a specific artifact
+1-Accumulate creatures
+2-Accumulate resources
+3-Upgrade a specific town
+4-Build a grail structure
+5-Defeat a specific Hero
+6-Capture a specific town
+7-Defeat a specific monster
+8-Flag all creature dwelling
+9-Flag all mines
+10-Transport a specific artifact
+255-None

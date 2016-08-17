@@ -1,0 +1,3 @@
+0-Town
+1-City
+2-Capitol
