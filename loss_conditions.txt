@@ -1,4 +1,0 @@
-0-Lose a specific town
-1-Lose a specific hero
-2-Time expires
-255-None

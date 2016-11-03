@@ -7,7 +7,7 @@ def load_map(filepath):
     classes.clear()
     with open(filepath, "rb") as file:
         for byte in degzip(file.read()):
-        hex_byte = hex(byte)[2:]
+            hex_byte = hex(byte)[2:]
             while len(hex_byte) < 2:
                 hex_byte = '0' + hex_byte
             classes.data.append(hex_byte)

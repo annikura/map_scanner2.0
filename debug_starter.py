@@ -1,6 +1,5 @@
 import argparse
 import os
-import gzip
 import subprocess
 
 import filework
@@ -15,7 +14,7 @@ files = os.listdir(directory)
 for file in files:
     print(file)
     try:
-        subprocess.check_call(["python", "main.py", directory + file, "--extended"])
+        subprocess.check_call(["python", "parse.py", directory + file, "--extended"])
     except Exception:
         with open(directory + file, "rb") as curf, open(folder + file, "wb") as wrto:
                 wrto.write(filework.degzip(curf.read()))

@@ -1,4 +1,0 @@
-0-Random
-1-Warrior
-2-Builder
-3-Explorer

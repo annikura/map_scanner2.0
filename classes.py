@@ -8,10 +8,7 @@ list_pointer = 0
 class GlobalConst:
     empty = "None"  # ! changes can lead to problems with files
     not_found = "Not found\n"
-    if sys.platform == 'linux':
-        encoding = 'koi8-r'
-    elif sys.platform in ['win32', 'cygwin']:
-        encoding = 'cp1251'
+    encoding = 'koi8-r' if sys.platform == 'linux' else 'cp1251'
     players_cnt = 8
     town_types = 9
     hex_base = 16
